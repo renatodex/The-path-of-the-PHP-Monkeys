@@ -31,7 +31,12 @@
     </div>
   </div>
 
-  <?php include 'story_pages.php' ?>
+  <?php 
+		$tpm = new TPMStoryPage();
+		$r = $tpm->findAll();
+		print_r(json_decode($r));
+		//include 'story_pages.php' 
+	?>
 
   <div id="rodape">
     <p id="copy">© Copyright 2012 - <strong>703 - The path of the Monkeys</strong></p>
