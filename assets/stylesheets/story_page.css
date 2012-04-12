@@ -1,7 +1,3 @@
-// Place all the styles related to the StoryPage controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@charset "UTF-8";
 /* geral */
 *{border:0; padding:0; margin:0;font-size: 100%; font: inherit;	vertical-align:central; list-style:none;}
 body{background-color:#000000; color:#FFFFFF;}

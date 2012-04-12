@@ -1,5 +1,7 @@
 <?php
 
+	define('TPM_BASE_URL', 'http://tpm.ayphos.com.br/');
+
 	class HttpConnector {
 		protected $ch;
 		protected $response;
@@ -14,7 +16,6 @@
 			if(!empty($this->baseUrl)) {
 				$curl_url = $this->baseUrl.$url;
 			}
-			print_r($curl_url);
             curl_setopt($this->ch, CURLOPT_URL, $curl_url);
             curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, TRUE);
 			$this->response = curl_exec($this->ch);
@@ -24,7 +25,7 @@
 	}
 
 	abstract class TPM {
-		protected $baseUrl = 'http://tpm.ayphos.com.br/';
+		protected $baseUrl = TPM_BASE_URL;
 		
 		public function getConnector() {
 			return new HttpConnector($this->baseUrl);
@@ -40,15 +41,12 @@
 		public $titulo;
 		public $desc;
 		
-		function findAll() {
-			$connector = $this->getConnector();
-			$result = $connector->request('story_page/index.json');
+		public function findAll() {
+			$result = $this->getConnector()->request('story_page/index.json');
 			return $result;
 		}
+		
 	}
 	
 	class TPMStoryPage extends TPMStoryPageAbstract {
-		
 	}
-
-?>
