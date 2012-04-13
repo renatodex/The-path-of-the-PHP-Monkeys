@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>703 - The path of the Monkeys</title>
+  <title>703 - The path of the PHP Monkeys</title>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="/assets/javascripts/jquery.easing.1.3.js"></script>
